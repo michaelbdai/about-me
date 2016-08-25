@@ -1,3 +1,83 @@
-p {
+body{
+  padding: 60px;
+  font-family:verdana;
+  margin: 20px;
+  padding: 20px;
+}
+
+
+
+hr{
+  width: 100%;
+  margin-left: 0;
   color: blue;
+}
+a:link {
+  color: green;
+}
+
+a:hover {
+  font-size: 20px;
+  font-family: 'Baloo Bhaina', cursive;
+}
+a:visited {
+  color: red;
+}
+a:active {
+  color: black;
+}
+.blue-box, .yellow-box {
+  width: 400px;
+  border-radius: 5%;
+  border: 3px solid black;
+  padding: 50px;
+}
+.blue-box{
+  color: white
+  background: blue;
+  height: 200px;
+  font-family: 'Baloo Bhaina', cursive;
+}
+.blue-box:hover{
+  font-size: 20px;
+}
+.yellow-box{
+  height: 300px;
+  background: yellow;
+}
+
+.foo li {
+  border: 1px red solid;
+}
+
+.bar > li {
+  border: 1px green solid;
+}
+h1{
+  font-family: 'Open Sans', sans-serif;
+}
+.pokemon {
+  border: 1px solid black;
+  border-radius: 10%;
+  padding: 20px;
+  width: 800px;
+  height: 400px;
+  color: white;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.0)
+    ),url('image/pokemon-list.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.author {
+  color: grey;
+  font-style: italic;
+  margin-bottom: 60px;
+}
+.author::before {
+  content: "-";
+  margin-right: 20px;
 }
