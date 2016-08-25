@@ -1,10 +1,12 @@
 body{
   padding: 60px;
   font-family:verdana;
-  margin: 20px;
-  padding: 20px;
+  margin: 50px;
+  padding: 10px;
 }
-
+header{
+  height: 70px;
+}
 
 
 hr{
@@ -14,6 +16,7 @@ hr{
 }
 a:link {
   color: green;
+  height: 100px;
 }
 
 a:hover {
@@ -38,9 +41,7 @@ a:active {
   height: 200px;
   font-family: 'Baloo Bhaina', cursive;
 }
-.blue-box:hover{
-  font-size: 20px;
-}
+
 .yellow-box{
   height: 300px;
   background: yellow;
