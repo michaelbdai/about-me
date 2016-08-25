@@ -29,6 +29,19 @@ a:visited {
 a:active {
   color: black;
 }
+.spec-img{
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  border-radius: 50%;
+
+
+}
+.spec-img:hover{
+  transform: rotate(1080deg);
+  transition: all 2s;
+  box-shadow: 0 0 10px 10px rgba(232, 26, 112, 0.9);
+}
 .blue-box, .yellow-box {
   width: 400px;
   border-radius: 5%;
@@ -45,6 +58,7 @@ a:active {
 .yellow-box{
   height: 300px;
   background: yellow;
+  text-align: center;
 }
 
 .foo li {
@@ -58,8 +72,7 @@ h1{
   font-family: 'Open Sans', sans-serif;
 }
 .pokemon {
-  border: 1px solid black;
-  border-radius: 10%;
+  border: 1px solid red;
   padding: 20px;
   width: 800px;
   height: 400px;
@@ -71,6 +84,8 @@ h1{
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .author {
