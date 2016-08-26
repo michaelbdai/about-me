@@ -34,8 +34,6 @@ a:active {
   height: 200px;
   margin: auto;
   border-radius: 50%;
-
-
 }
 .spec-img:hover{
   transform: rotate(1080deg);
@@ -96,4 +94,42 @@ h1{
 .author::before {
   content: "-";
   margin-right: 20px;
+}
+.container-one {
+ width: 400px;
+ height: 300px;
+ border: 1px black solid;
+}
+
+.inner-one {
+   height: 100px;
+   background-color: blue;
+}
+
+.inner-two {
+  width: 75%;
+  height: 100px;
+  background-color: green;
+}
+.inner {
+  height: 100px;
+  width: 15%;
+  display: inline-block;
+  font-size: 0;
+}
+
+.inner-one {
+   background-color: blue;
+}
+
+.inner-two {
+  background-color: green;
+}
+
+.inner-three {
+  background-color: orange;
+}
+
+.inner-four {
+  background-color: red;
 }
