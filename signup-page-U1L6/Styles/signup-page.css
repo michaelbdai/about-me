@@ -46,7 +46,6 @@ body {
   border-radius: 3px;
   font-size: 18px;
 }
-
 .loginForm button[type = "submit"] {
   background-color: #65C470;
   color: white;
