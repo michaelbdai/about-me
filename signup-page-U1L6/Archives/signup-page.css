@@ -1,0 +1,87 @@
+
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #3F94E7;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 1;
+  background-color: #3F94E7;
+}
+.logo {
+    position:absolute;
+    height: 35px;
+    left:50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -17.5px;
+
+}
+main {
+  display: flex;
+  width: 100%;
+  padding-top: 0px;
+}
+.centerBox {
+  position:relative;
+  width: 400px;
+/*  height: 900px; */
+  left:50%;
+  padding: 0px;
+  border-radius: 5px;
+/*  padding: 40px; if I add this it won't vertical center why?*/
+  margin-left: -200px;
+  margin-top: 100px;
+  background-color: white;
+
+}
+
+.loginForm fieldset{
+  /* padding: 50px; */
+  border: none;
+  position: relative;
+  padding: 0px;
+  width: auto;
+
+}
+.loginForm label {
+  display: block;
+  margin-left: 50px;
+  margin-bottom: 5px;
+}
+.loginForm input, .loginForm button {
+  width: 300px;
+  height: 30px;
+  margin-left: 50px;
+  border-radius: 5px;
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.loginForm button {
+  background-color: #65C470;
+  color: white;
+  border: 2px solid #65C470;
+}
+.loginForm a { /* is it correct? a is child of .loginForm? */
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+h1 {
+  text-align: center;
+}
+.bottomNote {
+  display: block;
+  color: black;
+  font-weight: bold;
+
+}

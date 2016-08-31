@@ -1,0 +1,112 @@
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0; /* Tricky: override browser default */
+  padding: 80px;
+  font-family: "Roboto", sans-serif;
+  background-color: dodgerblue;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: grey;
+  border: 1px solid black;
+}
+
+header a {
+  text-decoration: none;
+}
+header a:link {
+  color: black;
+}
+header a:visited {
+  color: black;
+}
+header a:hover {
+  color: blue;
+}
+.searchArea{
+  margin-top: 40px;
+  height: 100px;
+  width: 100%;
+}
+.inputBar{
+  margin-top: 40px;
+  margin-left: 0px;
+  width: 500px;
+}
+.searchIcon {
+  border: 1px solid gray;
+}
+.roundCorner5 {
+  border-radius: 5px;
+}
+h1 {
+  font-size: 25px;
+}
+
+.demo-form fieldset {
+  padding-left: 0;
+  border: none;
+}
+
+.demo-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.demo-form input, .demo-form select {
+  display: block;
+  width: 250px;
+  margin-bottom: 15px;
+}
+
+.demo-form input {
+  padding: 3px;
+}
+
+.demo-form input::placeholder {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.demo-form input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: gray;
+}
+
+.demo-form input::-moz-placeholder { /* Firefox 19+ */
+  color: gray;
+}
+
+.demo-form input:-ms-input-placeholder { /* IE 10+ */
+  color: gray;
+}
+
+.demo-form input:-moz-placeholder { /* Firefox 18- */
+  color: gray;
+}
+
+.demo-form select {
+  cursor: pointer;
+}
+
+
+.demo-form input:invalid {
+  border: 2px red solid;
+}
+
+.radio-group label, .radio-group input{
+  display: inline-block;
+}
+
+.demo-form button {
+  width: 150px;
+  padding: 10px;
+  cursor: pointer;
+}
