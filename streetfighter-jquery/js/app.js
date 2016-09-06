@@ -1,46 +1,90 @@
 $(document).ready(function() {
+	doIntro();
+	playGame();
+});
+
+var hadoukenSound = false;
+function playHadouken () {
+  hadoukenSound = !hadoukenSound;
+  if (hadoukenSound) {
+    $('#hadouken-sound')[0].volume = 0.5;
+    $('#hadouken-sound')[0].load();
+    $('#hadouken-sound')[0].play();
+  }
+}
+
+var coolSound = false;
+function playCool () {
+  coolSound = !coolSound;
+  if (coolSound) {
+    $('#theme-song')[0].pause();
+    $('#cool')[0].play();
+  }
+}
+
+
+function playGame() {
   $('.ryu').mouseenter(function() {
-    $('.ryu-still').hide();
+    $('.ryu-action').hide();
     $('.ryu-ready').show();
   })
   .mouseleave(function() {
-    $('.ryu-ready').hide();
+    $('.ryu-action').hide();
     $('.ryu-still').show();
   })
   .mousedown(function() {
-    playHadouken(); // why this works? playHadouken is not defined yet!!!
-    $('.ryu-ready').hide();
+    playHadouken();
+    $('.ryu-action').hide();
     $('.ryu-throwing').show();
-    $('.hadouken').finish().show()
+    $('.hadouken')
+    .finish()
+    .show()
     .animate(
-      {'left': '1020px'},
+      {'left': '300px'},
       500,
       function() {
+        $('.hadouken').stop();
         $('.hadouken').hide();
-        $('.hadouken').css('left', '520px');
+        $('.hadouken').css('left', '-212px');
       }
     );
   })
   .mouseup(function() {
-    $('.ryu-throwing').hide();
-    $('.ryu-ready').show();
-    // ryu goes back to his ready position
+    $('.ryu-action').hide();
+    $('.ryu-still').show();
   });
 
-    $(document).keydown(function(e) {
-      if (e.keyCode == 88) {
-        $('.ryu-action').hide();
-        $('.ryu-cool').show();
-      }
-    }).keyup(function(e) {
-      if (e.keyCode == 88) {
-        $('.ryu-cool').hide();
-        $('.ryu-still').show();
-      }
+  $(document).keydown(function(key) {
+    if (key.keyCode == 88) {
+      playCool();
+      $('.ryu-action').hide();
+      $('.ryu-cool').show();
+    }
+  })
+  .keyup(function(key) {
+    if (key.keyCode == 88) {
+      $('#cool')[0].pause();
+      $('#cool')[0].load();
+      $('.ryu-cool').hide();
+      $('.ryu-still').show();
+    }
+  });
+}
+
+function doIntro() {
+  $('#theme-song')[0].volume = 0.1;
+  $('#theme-song')[0].play();
+  $('.sf-logo').fadeIn(3500, function() {
+    $('.sf-logo').fadeOut(1000, function() {
+      $('.brought-by').fadeIn(1500, function() {
+        $('.brought-by').fadeOut(1000, function() {
+          $('.jquery-logo').fadeIn(1500, function() {
+            $('.jquery-logo').fadeOut(1500, function(){
+              $('.how-to').fadeIn(1000);
+            });
+          })
+        })
+      })
     })
-});
-function playHadouken () {
-  $('#hadouken-sound')[0].volume = 0.5;
-  $('#hadouken-sound')[0].load();
-  $('#hadouken-sound')[0].play();
+  })
 }
