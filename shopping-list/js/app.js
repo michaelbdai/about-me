@@ -27,12 +27,16 @@ $(document).ready(function() {
   $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
     $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
   });
-  // $('.shopping-item-delete').on('click', 'li', function(event) {
-  // this.remove();
+
+  // ??? why it has to be $(this)
+  // $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
+  //   this.closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
   // });
-  //
-  // $('.shopping-item-toggle').on('click', 'li', function(event) {
-  // this.closest("li").toggleClass("shopping-item__checked");
+
+
+  //??? why the following doesn't work
+  // $('.shopping-item-toggle').on('click', '.shopping-item-toggle', function(event) {
+  //   $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
   // });
 
 });
