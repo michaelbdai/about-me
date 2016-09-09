@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-   console.log('document ready');
+//   console.log('document ready');
    var correctNum = generateNum();
    var countGuess = 0;
    var displayText = [];
@@ -53,7 +53,7 @@ $(document).ready(function(){
    $("form").submit(function(){
       event.preventDefault();
       // console.log('clicked guessButton');
-      // console.log('correctNum: ' + correctNum);
+      console.log('correctNum: ' + correctNum);
       var displayText = guessRes(correctNum,$('#userGuess').val(),countGuess);
       $("#feedback").text(displayText[0]);
       countGuess = displayText[1];
