@@ -37,10 +37,10 @@ $(document).ready(function() {
   //this one works as well.
   $('.shopping-item-toggle').on('click', function(event) {
 //    $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
-    $('button').closest(".shopping-item").toggleClass("shopping-item__checked");
-
-    var test = $(this).closest(".shopping-item");
-    console.log(test);
+//    $(this).closest("span").css( "text-decoration", "line-through" );
+    $(this).closest("li").find(".shopping-item").css( "text-decoration", "line-through" );
+    // var test = $(this).closest(".shopping-item");
+    // console.log(test);
 //    Description: For each element in the set, get the first element that matches
 //    the selector by testing the element itself and traversing up through its ancestors
 //    in the DOM tree.
