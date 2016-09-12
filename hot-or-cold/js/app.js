@@ -14,6 +14,7 @@ $(document).ready(function(){
       $("#feedback").text(displayText[0]);
       countGuess = displayText[1];
       $('#count').text(countGuess);
+      $('#guessList').text('');
    }
    function generateNum(){
       return Math.round(Math.random() * (100 - 1) + 1)
@@ -54,11 +55,15 @@ $(document).ready(function(){
       event.preventDefault();
       // console.log('clicked guessButton');
       console.log('correctNum: ' + correctNum);
+      $('#guessList').append(
+         '<li>' + $('#userGuess').val() + '</li>'
+      );
       var displayText = guessRes(correctNum,$('#userGuess').val(),countGuess);
       $("#feedback").text(displayText[0]);
       countGuess = displayText[1];
       $('#count').text(countGuess);
-      // console.log('displayText: ' + displayText);
       $('form')[0].reset();
+      // console.log('displayText: ' + displayText);
+
    })
 });

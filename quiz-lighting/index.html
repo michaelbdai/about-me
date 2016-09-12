@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Lighting 101</title>
+		<!-- Meta Tags -->
+		<meta charset="utf-8"/>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="styles/reset.css">
+		<link href='https://fonts.googleapis.com/css?family=Lato:400,700,900,900italic' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="styles/style.css"/>
+	</head>
+	<body>
+
+		<header> <!--Header -->
+
+			<!-- Top Navigation -->
+			<nav>
+				<ul class="clearfix">
+					<li><a class="what" href="#">Quiz introduction</a></li>
+					<li><a class="accuracy" href="#">JS</a></li>
+				</ul>
+			</nav>
+
+			<div class="introduction">
+				<div class="content">
+					<h3>Welcome to Lighting 101</h3>
+					<div>
+						<p>This is a multipult choice quiz. Each question can have one or more answers. </p>
+						<p>The questions content and the sequence of the questions are randomly generated from database each time you start the quiz.</p>
+						<a class="close" href="#">Start/Go back to quiz</a>
+					</div>
+				</div>
+			</div>
+			<div class="conclusion" style = 'display:none;'>
+				<div class="content">
+					<h3>You finished the quiz!</h3>
+					<div>
+						<p class="accuracy"></p>
+						<p>Let's replace the inefficient lighting with LED !!! </p>
+						<p>You can redo the quiz and discover more interesting facts about lighting. </p>
+						<a class="close new" href="#">Redo the quiz</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- logo text -->
+			<h1>Lighting 101</h1>
+
+		</header>
+
+		<section class="game"> <!-- Quiz Section -->
+
+			<!-- <h2 id="feedback">Make your Guess!</h2> -->
+			<h2 id="question">Question shown here using JS </h2>
+
+			<form>
+				<div>
+					<input type="checkbox" name="choice" id="choice-A" value = 'A' class="text" />
+					<label for="choice-A" id="label-A">A</label>
+				</div>
+				<div>
+					<input type="checkbox" name="choice" id="choice-B" value = 'B' class="text" />
+					<label for="choice-B" id="label-B">B</label>
+
+				</div>
+				<div>
+					<input type="checkbox" name="choice" id="choice-C" value = 'C' class="text" />
+					<label for="choice-C" id="label-C">C</label>
+				</div>
+				<div>
+					<input type="checkbox" name="choice" id="choice-D" value = 'D' class="text" />
+					<label for="choice-D" id="label-D">D</label>
+				</div>
+				<div class='display-img'></div>
+      			<input type="submit" id="guessButton" class="button" name="submit" value="Submit"/>
+			</form>
+			<div class='result-feedback'>
+				<p id = 'feedback1'>display feedback using JS</p>
+				<p>Quiz status:      <span id="answer-count">0</span> out of <span id="total-questions">0</span> has finished</p>
+				<p>Your performance: <span id="correct-count">0</span> correct, <span id="incorrect-count">0</span> incorrect.</p>
+
+			</div>
+
+
+		</section>
+		<!-- JavaScript -->
+		<script src="js/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</body>
+</html>
