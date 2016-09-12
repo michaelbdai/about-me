@@ -15,7 +15,7 @@ $(document).ready(function(){
          ],
          correctChoice:['A'],
          explaination:'Sunlight is 5500K.',
-         displayImg:'images/spectrum.png',
+         displayImg:'images/spectrum.PNG',
       },
       {
          questionId:2,
@@ -28,7 +28,7 @@ $(document).ready(function(){
          ],
          correctChoice:['A','B','D'],
          explaination:'The design of the LED is very flexible.',
-         displayImg:'images/bulbs.png',
+         displayImg:'images/bulbs.PNG',
       },
       {
          questionId:3,
@@ -41,7 +41,7 @@ $(document).ready(function(){
          ],
          correctChoice:['B'],
          explaination:'I found the cheapest LED bulb on Amazon.com, $1 for two. ',
-         displayImg:'images/cost-green.png',
+         displayImg:'images/cost-green.PNG',
       },
       {
          questionId:4,
@@ -54,7 +54,7 @@ $(document).ready(function(){
          ],
          correctChoice:['C'],
          explaination:'Most of them are incandescent bulb. ',
-         displayImg:'images/cost-green.png',
+         displayImg:'images/cost-green.PNG',
       },
       {
          questionId:5,
@@ -67,7 +67,7 @@ $(document).ready(function(){
          ],
          correctChoice:['A'],
          explaination:'You can light up an average living room cristal bright using LED like using one 40W incandescent bulb. ',
-         displayImg:'images/cost-green.png',
+         displayImg:'images/cost-green.PNG',
       },
       {
          questionId:6,
@@ -80,7 +80,7 @@ $(document).ready(function(){
          ],
          correctChoice:['A'],
          explaination:'It can last up to 30 years like TV. Every LED company wish they could make money like selling iPhone... ',
-         displayImg:'images/cost-green.png',
+         displayImg:'images/cost-green.PNG',
       },
       {
          questionId:7,
@@ -93,7 +93,7 @@ $(document).ready(function(){
          ],
          correctChoice:['C'],
          explaination:'The extra yellow skin tone make you look unheathy. A cheap way to improve it is to filter the yellow spectrum.',
-         displayImg:'images/reveal.png',
+         displayImg:'images/reveal.PNG',
       },
       {
          questionId:8,
@@ -106,7 +106,7 @@ $(document).ready(function(){
          ],
          correctChoice:['D'],
          explaination:'It is measured by R9 which is not listed on the LED product label. However, the CRI 90 LED usually have high R9.',
-         displayImg:'images/R9.png',
+         displayImg:'images/R9.PNG',
       },
       {
          questionId:9,
@@ -119,7 +119,7 @@ $(document).ready(function(){
          ],
          correctChoice:['B','C'],
          explaination:'Human eye is most sensitive to yellow light. Yellow plus blue makes white',
-         displayImg:'images/led-highlight.png',
+         displayImg:'images/led-highlight.PNG',
       },
       {
          questionId:10,
@@ -132,7 +132,7 @@ $(document).ready(function(){
          ],
          correctChoice:['B','D'],
          explaination:'Most plant appears green so it reflect green light',
-         displayImg:'images/cost-green.png',
+         displayImg:'images/cost-green.PNG',
       },
    ];
    var correctCount = 0;
