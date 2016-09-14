@@ -149,6 +149,7 @@ $(document).ready(function(){
       // var localMyArr = myArr.join(',').split(',');
       var localMyArr = [];
       for (var j = 0; j < myArr.length; j ++){localMyArr.push(myArr[j])};
+      // myArr.forEach(function(element){localMyArr.push(element)})
       for(var i = 0; i < x; i ++){
          if (localMyArr.length === 0){ //to make sure return array has x element.
             for (var j = 0; j < myArr.length; j ++){localMyArr.push(myArr[j])};
