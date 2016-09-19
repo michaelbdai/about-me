@@ -2,14 +2,19 @@ $(document).ready(function() {
 
   $("#js-shopping-list-form").submit(function(event) {
     event.preventDefault();
-    if( !/^[\w\s]+$/.test($("#shopping-list-entry").val())){
-      alert('The name of item can only contains letter, number and space. ');
+    if ($("#shopping-list-entry").val() === ''){
+      alert('the name cannot be blank.');
       return;
-    }
-//  $("#js-shopping-list-form button").click(function(event) {
- // stops default browser behavior for form submission
+    } else if($("#shopping-list-entry").val() === ' '){
+      alert('the name cannot be space only.');
+      return;
+    } else if(!/^[\w\s]+$/.test($("#shopping-list-entry").val())){
+      alert('The name of item can only contains letter, number and space.');
+      return;
+    };
+
     $(".shopping-list").append(
-    '<li>' +
+    '<div>' +
       ' <span class="shopping-item">' +
       $("#shopping-list-entry").val() +
       '</span>' +
@@ -20,7 +25,7 @@ $(document).ready(function() {
         '<button class="shopping-item-delete">' +
           '<span class="button-label">delete</span>' +
         '</button>' + // + is needed here.
-      '</div></li>'
+      '</div></div>'
     );
     $("#js-shopping-list-form")[0].reset(); // remove the submitted item from the form input
   });

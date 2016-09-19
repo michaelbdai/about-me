@@ -8,6 +8,8 @@ body {
 
 button, input[type="text"] {
   padding: 5px;
+  font-size: 16px;
+  margin-left: 5px;
 }
 
 button:hover {
@@ -22,14 +24,16 @@ button:hover {
   max-width: 600px;
   margin: 0 auto;
 }
-
+.shopping-list-controls {
+  font-size:0;
+}
 .shopping-list {
   list-style: none;
   padding-left: 0;
 }
 
-.shopping-list > li {
-  margin-bottom: 20px;
+.shopping-list > div {
+  margin-top: 20px;
   border: 1px solid grey;
   padding: 20px;
 }
