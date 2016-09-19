@@ -14,7 +14,7 @@ $(document).ready(function() {
     };
 
     $(".shopping-list").append(
-    '<div>' +
+    '<div class = "item-wrapper">' +
       ' <span class="shopping-item">' +
       $("#shopping-list-entry").val() +
       '</span>' +
@@ -31,30 +31,12 @@ $(document).ready(function() {
   });
 
   $('.shopping-list').on('click', '.shopping-item-delete', function(event) {
-  $(this).closest("li").remove();
+  $(this).closest(".item-wrapper").remove();
   });
 
-  // $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
-  //   $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
-  // });
-
-  // ??? why it has to be $(this) jQuery require $(). this is regular JS.
-  // $('.shopping-list').on('click', '.shopping-item-toggle', function(event) {
-  //   this.closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
-  // });
-
-
-  //this one works as well.
-  //$(document).on('click','img',function(event){
   $(document).on('click','.shopping-item-toggle', function(event) {
-   $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
-//    $(this).closest("span").css( "text-decoration", "line-through" );
-    // $(this).closest("li").find(".shopping-item").css( "text-decoration", "line-through" );
-    // var test = $(this).closest(".shopping-item");
-    // console.log(test);
-//    Description: For each element in the set, get the first element that matches
-//    the selector by testing the element itself and traversing up through its ancestors
-//    in the DOM tree.
+   $(this).closest(".item-wrapper").find(".shopping-item").toggleClass("shopping-item__checked");
+
   });
 
 });
