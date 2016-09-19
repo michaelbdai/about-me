@@ -2,7 +2,7 @@ $(document).ready(function() {
 
   $("#js-shopping-list-form").submit(function(event) {
 //  $("#js-shopping-list-form button").click(function(event) {
-    //event.preventDefault(); // stops default browser behavior for form submission
+    event.preventDefault(); // stops default browser behavior for form submission
     $(".shopping-list").append(
     '<li>' +
       ' <span class="shopping-item">' +
@@ -36,9 +36,9 @@ $(document).ready(function() {
 
   //this one works as well.
   $('.shopping-item-toggle').on('click', function(event) {
-//    $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
+   $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
 //    $(this).closest("span").css( "text-decoration", "line-through" );
-    $(this).closest("li").find(".shopping-item").css( "text-decoration", "line-through" );
+    // $(this).closest("li").find(".shopping-item").css( "text-decoration", "line-through" );
     // var test = $(this).closest(".shopping-item");
     // console.log(test);
 //    Description: For each element in the set, get the first element that matches

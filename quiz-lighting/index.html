@@ -15,17 +15,17 @@
 
 			<!-- Top Navigation -->
 			<nav>
-				<ul class="clearfix">
-					<li><a class="what" href="#">Quiz introduction</a></li>
+				<ul class="nav-wrapper">
+					<li><a class="intro" href="#">Quiz introduction</a></li>
 					<li><a class="accuracy" href="#">JS</a></li>
 				</ul>
 			</nav>
 
 			<div class="introduction">
 				<div class="content">
-					<h3>Welcome to Lighting 101</h3>
+					<h3>Quiz: Lighting 101</h3>
 					<div>
-						<p>This is a multipult choice quiz. Each question can have one or more answers. </p>
+						<p>This is a multipult choice quiz. Each question can have one or more answers. If the answer is A and B, you have to check both A and B to pass. </p>
 						<p>The questions content and the sequence of the questions are randomly generated from database each time you start the quiz.</p>
 						<a class="close" href="#">Start/Go back to quiz</a>
 					</div>
@@ -39,11 +39,6 @@
 						<p>Let's replace the inefficient lighting with LED !!! </p>
 						<p>You can redo the quiz and discover more interesting facts about lighting. </p>
 						<a class="close new" href="#">Redo the quiz</a>
-						<!-- <form class="user-record" action="index.html" method="post">
-							<label for="name">Enter your name and your result will show below</label>
-							<input type="text" id = 'name'>
-							<button type='submit' class="close">Submit My Info</button>
-						</form> -->
 					</div>
 				</div>
 			</div>
@@ -59,20 +54,20 @@
 			<h2 id="question">Question shown here using JS </h2>
 
 			<form>
-				<div>
+				<div class="checkbox-wrapper">
 					<input type="checkbox" name="choice" id="choice-A" value = 'A' class="text" />
 					<label for="choice-A" id="label-A">A</label>
 				</div>
-				<div>
+				<div class="checkbox-wrapper">
 					<input type="checkbox" name="choice" id="choice-B" value = 'B' class="text" />
 					<label for="choice-B" id="label-B">B</label>
 
 				</div>
-				<div>
+				<div class="checkbox-wrapper">
 					<input type="checkbox" name="choice" id="choice-C" value = 'C' class="text" />
 					<label for="choice-C" id="label-C">C</label>
 				</div>
-				<div>
+				<div class="checkbox-wrapper">
 					<input type="checkbox" name="choice" id="choice-D" value = 'D' class="text" />
 					<label for="choice-D" id="label-D">D</label>
 				</div>

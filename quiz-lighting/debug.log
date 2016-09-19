@@ -13,3 +13,9 @@
 [0912/215359:WARNING:in_range_cast.h(38)] value 2200489825260 out of range
 [0912/215359:WARNING:in_range_cast.h(38)] value 2200490423520 out of range
 [0912/215359:WARNING:in_range_cast.h(38)] value 2200537819216 out of range
+[0914/080054:ERROR:process_info.cc(608)] range at 0xc658339a00000000, size 0x247 fully unreadable
+[0914/080054:ERROR:process_info.cc(608)] range at 0xc65833fc00000000, size 0x247 fully unreadable
+[0914/080054:ERROR:process_info.cc(608)] range at 0x0, size 0x247 fully unreadable
+[0914/080054:ERROR:process_reader_win.cc(142)] SuspendThread: Access is denied. (0x5)
+[0914/080054:ERROR:exception_snapshot_win.cc(88)] thread ID 6712 not found in process
+[0914/080054:WARNING:crash_report_exception_handler.cc(60)] ProcessSnapshotWin::InitializeException failed

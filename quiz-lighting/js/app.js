@@ -110,7 +110,7 @@ $(document).ready(function(){
       },
       {
          questionId:9,
-         question:'For LED vehicle headlight, people need it to as bright as possible. Which two major colors is its white light made of? ',
+         question:'For LED vehicle headlight, people need it to be as bright as possible. Which two major colors is its white light made of? ',
          multChoice:[
             'A. Green',
             'B. Blue',
@@ -207,7 +207,7 @@ $(document).ready(function(){
    }
 
 
-   $(".what").click(function(){
+   $(".intro").click(function(){
     	$(".introduction").fadeIn(1000);
   	});
    /*--- Hide information modal box ---*/

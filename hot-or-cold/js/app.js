@@ -37,7 +37,11 @@ $(document).ready(function(){
          return ["hot",countGuess + 1];
       }else if (difference >= 1){
          return ["very hot",countGuess + 1];
-      }else{return ["you win",countGuess + 1];}
+      }else{
+         $(".final-result").fadeIn(1000);
+         return ["you win",countGuess + 1];
+
+      }
    }
    /*--- Display information modal box ---*/
 
@@ -45,9 +49,13 @@ $(document).ready(function(){
     	$(".overlay").fadeIn(1000);
   	});
    /*--- Hide information modal box ---*/
-   $("a.close").click(function(){
+   $(".overlay a.close").click(function(){
   		$(".overlay").fadeOut(1000);
   	});
+   $(".final-result a.close").click(function(){
+      resetVariables();
+      $(".final-result").fadeOut(1000);
+   });
    $(".new").click(function(){
       resetVariables();
    });
