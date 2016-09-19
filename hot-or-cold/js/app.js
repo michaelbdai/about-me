@@ -28,8 +28,11 @@ $(document).ready(function(){
       }
       if (guessNum > 100 || guessNum < 1){
          alert('Please enter a number between 1 and 100.');
-         return ['Please enter a number',countGuess];         
+         return ['Please enter a number',countGuess];
       }
+      $('#guessList').append(
+         '<li>' + $('#userGuess').val() + '</li>'
+      );
       var difference = Math.abs(correctNum - Number(guessNum));
       if (difference >= 50){
          return ["Ice cold",countGuess + 1];
@@ -67,9 +70,7 @@ $(document).ready(function(){
       event.preventDefault();
       // console.log('clicked guessButton');
       console.log('correctNum: ' + correctNum);
-      $('#guessList').append(
-         '<li>' + $('#userGuess').val() + '</li>'
-      );
+
       var displayText = guessRes(correctNum,$('#userGuess').val(),countGuess);
       $("#feedback").text(displayText[0]);
       countGuess = displayText[1];

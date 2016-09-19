@@ -1,12 +1,13 @@
 $(document).ready(function() {
 
   $("#js-shopping-list-form").submit(function(event) {
+    event.preventDefault();
     if( $("#shopping-list-entry").val() === ''){
       alert('please enter the name of the item');
       return;
     }
 //  $("#js-shopping-list-form button").click(function(event) {
-    event.preventDefault(); // stops default browser behavior for form submission
+ // stops default browser behavior for form submission
     $(".shopping-list").append(
     '<li>' +
       ' <span class="shopping-item">' +
