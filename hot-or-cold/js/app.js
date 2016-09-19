@@ -26,6 +26,10 @@ $(document).ready(function(){
          alert('Please enter a number');
          return ['Please enter a number',countGuess];
       }
+      if (guessNum > 100 || guessNum < 1){
+         alert('Please enter a number between 1 and 100.');
+         return ['Please enter a number',countGuess];         
+      }
       var difference = Math.abs(correctNum - Number(guessNum));
       if (difference >= 50){
          return ["Ice cold",countGuess + 1];

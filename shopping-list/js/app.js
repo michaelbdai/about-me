@@ -1,6 +1,10 @@
 $(document).ready(function() {
 
   $("#js-shopping-list-form").submit(function(event) {
+    if( $("#shopping-list-entry").val() === ''){
+      alert('please enter the name of the item');
+      return;
+    }
 //  $("#js-shopping-list-form button").click(function(event) {
     event.preventDefault(); // stops default browser behavior for form submission
     $(".shopping-list").append(
@@ -35,7 +39,8 @@ $(document).ready(function() {
 
 
   //this one works as well.
-  $('.shopping-item-toggle').on('click', function(event) {
+  //$(document).on('click','img',function(event){
+  $(document).on('click','.shopping-item-toggle', function(event) {
    $(this).closest("li").find(".shopping-item").toggleClass("shopping-item__checked");
 //    $(this).closest("span").css( "text-decoration", "line-through" );
     // $(this).closest("li").find(".shopping-item").css( "text-decoration", "line-through" );
