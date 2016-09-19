@@ -2,8 +2,8 @@ $(document).ready(function() {
 
   $("#js-shopping-list-form").submit(function(event) {
     event.preventDefault();
-    if( $("#shopping-list-entry").val() === ''){
-      alert('please enter the name of the item');
+    if( !/^[\w\s]+$/.test($("#shopping-list-entry").val())){
+      alert('The name of item can only contains letter, number and space. ');
       return;
     }
 //  $("#js-shopping-list-form button").click(function(event) {
