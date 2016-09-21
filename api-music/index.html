@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Spotifisearch</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+	<!-- the logo picture does not show!! -->
+	<link rel="small-logo" href="images/spotifisearch-logo.PNG" />
+</head>
+<body>
+
+
+
+	<nav class="nav-wrapper">
+		<div class="nav-inner">
+			<div class="mobi-nav">
+				<!-- nav for mobile device -->
+			</div><!-- mobi-nav -->
+			<div class="logo-small result">
+				<a>Spotifisearch</a>
+			</div> <!-- logo-small -->
+			<div class="main-nav "><!-- main-nav***************************** -->
+				<form class="search-general result">
+					<input class = 'text-input' type="text" placeholder='Enter a keyword for the music name' name="tags" size="30" autofocus required>
+					<input class = 'text-submit' type="image" value="submit" src="images/spotifisearch-logo.PNG" alt="submit Button" onMouseOver="this.src='images/spotifisearch-logo.PNG'">
+				</form>
+			</div> <!-- main-nav******************************************* -->
+			<div class="right-nav top-layer">
+				<a> Powerd by: </a>
+				<img class="spotify-credit" src="images/credit1.PNG" alt="" />
+				<img class="musixmatch-credit " src="images/credit3.PNG" alt="" />
+				<img class="tastekid-credit " src="images/credit2.PNG" alt="" />
+				<img class="tastekid-credit " src="images/credit4.PNG" alt="" />
+			</div> <!-- right-nav -->
+		</div>
+	</nav>
+<!-- result-nav************************************************************ -->
+	<!-- <nav class="result-nav result">
+		<div class="result-tags">
+			<div class="">
+				<a class="track-tag">Music</a>
+			</div>
+			<div class="">
+				<a class="album-tag">Album</a>
+			</div>
+			<div class="">
+				<a class="artist-tag">Artist</a>
+			</div>
+			<div class="">
+				<a class="mm-tag">Lyrics</a>
+			</div>
+			<div class="">
+				<a class="tk-tag">Recommendations</a>
+			</div>
+		</div>
+	</nav> -->
+	 <!-- result-nav********************************************* -->
+
+	<div class="body-wrapper">
+		<div class="main-wrapper">
+			<div class="cover-page top-layer" > <!-- cover-page top-layer -->
+				<div class="title-large">
+					<img src="images/spotifisearch-logo.PNG" alt="" />
+					<a>Spotifisearch</a>
+				</div>
+				<form class="search-spotify search-wrapper">
+
+					<!-- <select class="select" name="type">
+						<option value="track">Music name</option>
+						<option value="album">Album</option>
+						<option value="artist">Artist</option>
+					</select> -->
+					<input class='text-input' type="text" placeholder='Enter a keyword for the music name' name="tags" size="30" autofocus required>
+					<input class = 'text-submit' type="submit" value="Search">
+				</form>
+			</div> <!-- cover-page top-layer************************** -->
+			<div class="result-wrapper result"> <!-- result-wrapper**************** -->
+				<div class="result-body">
+				</div>
+			</div> <!-- result-wrapper******************************************** -->
+
+
+
+		</div> <!-- main-wrapper -->
+  </div> <!-- body-wrapper -->
+	<div class="quick-link">
+
+	</div> <!-- quick-link -->
+	<div class="templates hidden">
+		<div class="tracks-result">
+			<p class='display-text1'></p>
+			<p class='display-text2'></p>
+			<p class='display-text3'></p>
+			<img class='display-img'/>
+		</div>
+		<div class="albums-result">
+			<p class='display-text'></p>
+			<div class='display-img'></div>
+		</div>
+		<div class="artists-result">
+			<p class='display-text'></p>
+			<div class='display-img'></div>
+		</div>
+		<div class="explanation">
+			<h1>Explore Free Music</h1>
+			<p>This app let you explore music from free streaming website.</p>
+			<p>For Version 1, app does not save user data. Version 2 will be able to save user data by add user login page.</p>
+		</div>
+		<div class="error hidden" >
+			<p>Uh-oh! Something went wrong with your request. Here's what we know:</p>
+		</div>
+	</div>
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

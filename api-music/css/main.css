@@ -1,0 +1,245 @@
+body {
+	/*background-color: black;*/
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	background-color: black;
+}
+
+.result, .hidden {
+	display: none;
+}
+
+.nav-wrapper {
+	width: 100%;
+	height: 55px;
+	position: fixed;
+	top: 0px;
+	background-color: black;
+	/*border: 0.1px solid red;*/
+	z-index: 1000;
+	padding-top: 20px;
+
+}
+.nav-inner {
+	position: relative;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	width: 1000px;
+	height: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0px;
+	/*border: 0.1px solid red;*/
+}
+/*nav .logo-small {*/
+	/*width: 55px;*/
+	/*border: 0.1px solid red;*/
+	/*display: inline;*/
+/*}*/
+nav img{
+	height: 30px;
+	margin: 12.5px;
+	margin-right: 0px;
+	z-index: 2000;
+	display: inline;
+}
+.logo-small a {
+	display: inline;
+	position: relative;
+	float:left;
+	/*border: 0.1px solid red;*/
+	margin: 0px;
+	margin-left: 40px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 25px;
+}
+.main-nav {
+	display: inline;
+	position: fixed;
+	/*border: 0.1px solid red;*/
+	margin: 0px;
+	margin-left: 40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	/*padding-left: 20px;*/
+	width: auto;
+}
+.main-nav form * {
+	border-radius: 5px;
+	height: 30px;
+	font-size: 15px;
+	float: left;
+	border: none;
+	margin-right: 20px;
+	margin-top: 0px;
+	padding-left: 10px;
+}
+.main-nav form .text-input {
+	width:600px;
+}
+.main-nav form .text-submit {
+	/*border: 0.1px solid red;*/
+}
+
+.right-nav {
+	float:right;
+
+}
+.right-nav a {
+	display: inline;
+	position: relative;
+	float:left;
+	/*border: 0.1px solid red;*/
+	margin: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 15px;
+}
+
+.body-wrapper {
+	padding-top: 70px;
+	width: 100%;
+	/*border: 0.1px solid red;*/
+
+}
+.main-wrapper {
+	position: relative;
+	margin-top: 0px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-bottom: 10px;
+
+
+}
+.cover-page {
+	padding-top: 100px;
+	height: 100%;
+	/*border: 0.1px solid red;*/
+	background-image: url('../images/bodybackground.PNG');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: bottom;
+	background-color: black;
+}
+.top-layer {
+	display: none; /*!!! for testing ------------------------------------ */
+}
+
+.cover-page .title-large {
+	margin-left: 150px;
+	margin-bottom: 50px;
+	/*border: 0.1px solid red;*/
+}
+.cover-page img {
+	width: 100px;
+}
+.cover-page a {
+	font-size: 60px;
+	color: white;
+	display: inline;
+	position: absolute;
+	margin-top: 20px;
+}
+.cover-page form {
+	text-align: center;
+	margin-bottom: 400px;
+}
+/*.cover-page select {
+	height: 52px;
+	width: 150px;
+	font-size: 20px;
+	color: #4B1B44;
+
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	border: none;
+	padding-left: 15px;
+}*/
+
+.cover-page .text-input  {
+
+	height: 50px;
+	/*width: 450px;*/
+	width: 600px;
+	font-size: 20px;
+	/*border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;*/
+	border-radius: 20px;
+	border: none;
+	margin-left: 10px;
+	padding-left: 25px;
+	color: #4B1B44;
+	border: 4px solid #4B1B44;
+}
+input:focus{
+	outline:none;
+}
+.cover-page .text-submit  {
+	border-radius: 20px;
+	height: 55px;
+	width: 150px;
+	font-size: 20px;
+	color: #4B1B44;
+	border: 4px solid #4B1B44;
+	margin-left: 50px;
+}
+.result-nav {
+	width:100%;
+	height: 50px;
+	margin-top: 90px;
+	background-color: #232323;
+	/*border: 0.1px solid red;*/
+	border-bottom: 1px solid grey;
+}
+nav .logo-small:hover, nav .search-general:hover {
+	cursor: pointer;
+}
+.result-tags {
+	width: 1000px;
+	/*height: 50px;*/
+	margin-left: auto;
+	margin-right: auto;
+	/*border: 0.1px solid red;*/
+}
+.result-tags > * {
+	/*border: 0.1px solid red;*/
+	display: inline;
+	/*height: 50px;*/
+	float: left;
+	padding: 17.5px;
+
+}
+.result-tags a {
+	font-size: 15px;
+}
+
+.result-body {
+	width: 100%;
+
+	padding: 20px;
+	height: 700px;
+	/*border: 0.1px solid red;*/
+	/*background-image: url('../images/bodybackground2.jpg');*/
+	/*background-repeat: no-repeat;
+	background-size:cover;
+	background-position: top;*/
+	background-color: black;
+}
+.result-body > * {
+	float: left;
+	padding: 10px;
+	width: 200px;
+	height: 200px;
+}
+.result-body .tracks-result * {
+	width: 190px;
+
+
+}
+/*.result-body .tracks-result .display-text1 {
+	position: absolute;
+	margin-top: 20px;
+
+}*/
