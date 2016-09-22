@@ -36,27 +36,6 @@
 			</div> <!-- right-nav -->
 		</div>
 	</nav>
-<!-- result-nav************************************************************ -->
-	<!-- <nav class="result-nav result">
-		<div class="result-tags">
-			<div class="">
-				<a class="track-tag">Music</a>
-			</div>
-			<div class="">
-				<a class="album-tag">Album</a>
-			</div>
-			<div class="">
-				<a class="artist-tag">Artist</a>
-			</div>
-			<div class="">
-				<a class="mm-tag">Lyrics</a>
-			</div>
-			<div class="">
-				<a class="tk-tag">Recommendations</a>
-			</div>
-		</div>
-	</nav> -->
-	 <!-- result-nav********************************************* -->
 
 	<div class="body-wrapper">
 		<div class="main-wrapper">
@@ -66,12 +45,6 @@
 					<a>Spotifisearch</a>
 				</div>
 				<form class="search-spotify search-wrapper">
-
-					<!-- <select class="select" name="type">
-						<option value="track">Music name</option>
-						<option value="album">Album</option>
-						<option value="artist">Artist</option>
-					</select> -->
 					<input class='text-input' type="text" placeholder='Enter a keyword for the music name' name="tags" size="30" autofocus required>
 					<input class = 'text-submit' type="submit" value="Search">
 				</form>
@@ -79,21 +52,19 @@
 			<div class="result-wrapper result"> <!-- result-wrapper**************** -->
 				<div class="result-body">
 				</div>
+				<div class="detail-result hidden">
+				</div>
 			</div> <!-- result-wrapper******************************************** -->
-
 
 
 		</div> <!-- main-wrapper -->
   </div> <!-- body-wrapper -->
-	<div class="quick-link">
-
-	</div> <!-- quick-link -->
 	<div class="templates hidden">
 		<div class="tracks-result">
 			<p class='display-text1'></p>
 			<p class='display-text2'></p>
-			<p class='display-text3'></p>
-			<img class='display-img'/>
+			<p class='display-text3 hidden'></p>
+
 		</div>
 		<div class="albums-result">
 			<p class='display-text'></p>
@@ -103,6 +74,27 @@
 			<p class='display-text'></p>
 			<div class='display-img'></div>
 		</div>
+		<div class="detail-result">
+		</div>
+		<div class="spotify-details">
+			<video controls></video>
+			<div class="spotify-text">
+				<p class='display-text1'></p>
+				<p class='display-text2'></p>
+				<p class='display-text3 hidden'></p>
+			</div>
+
+		</div>
+		<div class="mm-details">
+
+		</div>
+		<div class="tk-details">
+
+		</div>
+		<div class="bit-details">
+
+		</div>
+
 		<div class="explanation">
 			<h1>Explore Free Music</h1>
 			<p>This app let you explore music from free streaming website.</p>

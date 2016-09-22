@@ -18,7 +18,23 @@ var displayTracks = function(tracksInfo){
 	var dispArtName = result.find('.display-text2');
 	dispArtName.text('Singer: ' + tracksInfo.artists[0].name);
 	result.attr('style','background-image: linear-gradient(rgba(0, 0, 0, 1) , rgba(0, 0, 0, 0.3)),url(\'' + tracksInfo.album.images[1].url +'\'); background-size: contain;' )
+	var detailInfo = result.find('.display-text3');
+
+	var infoStr = '';
+	infoStr += 'mp3-preview-url' + ':' + tracksInfo.preview_url + '_';
+	infoStr += 'id' + ':' + tracksInfo.id +'_';
+	infoStr += 'popularity' + ':' + tracksInfo.popularity +'_';
+	infoStr += 'external-url' + ':' + tracksInfo.external_urls.spotify +'_';
+	detailInfo.text(infoStr);
 	return result;
+}
+var videoHtml = function(mp3Url,posterUrl){
+	var playerHtml = '<video src=\''
+	+ mp3Url
+	+ '\' controls poster=\''
+	+ posterUrl
+	+ '\'></video>';
+	return playerHtml
 }
 var searchSpotify = function(searchQuery, searchType, searchLimit){
 	var request = {
@@ -68,19 +84,7 @@ var searchTracks = function(settings){
 		console.log(searchCount);
 	})
 }
-var searchArtist = function(settings){
-	$.ajax(settings)
-	.done(function(result){
-		console.log(result);
-		console.log(result.artists.items);
-	})
-}
-var searchAlbum = function(settings){
-	$.ajax(settings)
-	.done(function(result){
-		console.log(result);
-	})
-}
+
 
 
 $(document).ready( function() {
@@ -103,88 +107,102 @@ $(document).ready( function() {
 
 		// $('.search-spotify')[0].reset();
 	});
+	$(document).on('click','.tracks-result',function(event){
+		var nameStr = $(this).find('.display-text1').text().split(': ', 2)[1];
+		var singerStr = $(this).find('.display-text2').text().split(': ', 2)[1];
+		// console.log(nameStr);
+		// console.log(singerStr);
+// 9/21 ******************************************************************
+		getMM(nameStr,singerStr);
+		// getTK(nameStr,singerStr);
+		// getBT(nameStr,singerStr);
+		$('.detail-result').show();
+
+	})
+
 	$('.logo-small').on('click',function(){
 		$('.result').hide();
 		$('.top-layer').show();
-	})
+	});
 });
 
 //****************************************************************************************************************
-
-var getLyrics = function(name,artist){
+var getMM = function(name,artist){
 	console.log(name + ' by ' + artist);
 	$.ajax({
 
 			url: "http://api.musixmatch.com/ws/1.1/matcher.lyrics.get",
-	    //jsonp: false,
-	    dataType: "jsonp",
+			//jsonp: false,
+			dataType: "jsonp",
 			jsonp: 'callback',
-	    data: {
+			data: {
 							q_track: name,
 							q_artist: artist,
 							apikey: '33620d00ea8d8795ff4e49f0b4549d03',
 							format: 'jsonp',
-	    }
+			}
 	}).done(function(result){
-		// console.log(result);
+		console.log('searched musizmatch');
+		console.log(result);
+		if(result.message.body.length === 0){
+			console.log('no result from musizmatch');
+			return;
+		};
+		// console.log(result.message.body.length);
 		console.log(result.message.body.lyrics.lyrics_id);
 		console.log(result.message.body.lyrics.lyrics_body);
 	});
-	$.ajax({
-			url: "https://www.tastekid.com/api/similar",
-	    //jsonp: false,
-	    dataType: "jsonp",
-			jsonp: 'callback',
+	return;
+};
+var getTK = function(name,artist){
+		$.ajax({
+				url: "https://www.tastekid.com/api/similar",
+		    //jsonp: false,
+		    dataType: "jsonp",
+				jsonp: 'callback',
 
-	    data: {
-							k: '240254-BingDai-6SQWHIFJ',
-							q: artist,
-							info: 1,
-							type: 'music',
-							format: 'jsonp',
-	    }
-	}).done(function(result){
-		console.log('search tastekid');
-		console.log(result);
-		console.log(result.Similar.Info[0]);
-	});
-
+		    data: {
+								k: '240254-BingDai-6SQWHIFJ',
+								q: artist,
+								info: 1,
+								type: 'music',
+								format: 'jsonp',
+		    }
+		}).done(function(result){
+			console.log('searched tastekid');
+			console.log(result);
+			if(result.length === 0){
+				console.log('no result from tastekid');
+				return
+			};
+			// console.log(result.Similar.Info[0]);
+		});
+}
+var getBT = function(name,artist){
 	var urlBandsintown1 = 'http://api.bandsintown.com/artists/' + artist + '/events.json?api_version=2.0&app_id=spotifisearch&callback=?';
 	$.getJSON(urlBandsintown1,
-		function(data){
+		function(result){
 			console.log('search bandsintown1')
-			console.log(data);
+			console.log(result);
+			if(result.length === 0){
+				console.log('no result from bandsintown1');
+				return
+			};
 		})
 	var urlBandsintown2 = 'http://api.bandsintown.com/artists/'+ artist +'/events/search?format=json&app_id=spotifisearch&api_version=2.0&location=use_geoip&radius=150&callback=?'
 	$.getJSON(urlBandsintown2,
-		function(data){
+		function(result){
 			console.log('search bandsintown2')
-			console.log(data);
+			console.log(result);
+			if(result.length === 0){
+				console.log('no result from bandsintown2');
+				return;
+			};
 		})
 	return;
 }
 
-var showAlbum = function(item) {
-	var result = $('.templates .question').clone();
-	var displayText = result.find('.display-text');
-	displayText.text(item.name);
-	var displayImg = result.find('.display-img');
-	var imgHtml = '<img src="'+
-	item.album.images[0].url +
-	'" alt="'+
-	item.id +
-	'" />';
-	displayImg.html(imgHtml)
-	return result;
-};
 
-
-// this function takes the results object from StackOverflow
-// and returns the number of results and tags to be appended to DOM
-var showSearchResults = function(query, resultNum) {
-	var results = resultNum + ' results for <strong>' + query + '</strong>';
-	return results;
-};
 
 // takes error string and turns it into displayable DOM element
 var showError = function(error){
@@ -192,3 +210,16 @@ var showError = function(error){
 	var errorText = '<p>' + error + '</p>';
 	errorElem.append(errorText);
 };
+var searchArtist = function(settings){
+	$.ajax(settings)
+	.done(function(result){
+		console.log(result);
+		console.log(result.artists.items);
+	})
+}
+var searchAlbum = function(settings){
+	$.ajax(settings)
+	.done(function(result){
+		console.log(result);
+	})
+}

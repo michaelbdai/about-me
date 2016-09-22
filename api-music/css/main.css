@@ -1,5 +1,8 @@
+
+* {
+  box-sizing: border-box;
+}
 body {
-	/*background-color: black;*/
 	font-family: 'Roboto', sans-serif;
 	color: white;
 	background-color: black;
@@ -11,7 +14,6 @@ body {
 
 .nav-wrapper {
 	width: 100%;
-	height: 55px;
 	position: fixed;
 	top: 0px;
 	background-color: black;
@@ -25,7 +27,6 @@ body {
 	margin-top: 0px;
 	margin-bottom: 0px;
 	width: 1000px;
-	height: 100%;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 0px;
@@ -98,7 +99,7 @@ nav img{
 }
 
 .body-wrapper {
-	padding-top: 70px;
+	padding-top: 100px;
 	width: 100%;
 	/*border: 0.1px solid red;*/
 
@@ -196,50 +197,24 @@ input:focus{
 nav .logo-small:hover, nav .search-general:hover {
 	cursor: pointer;
 }
-.result-tags {
-	width: 1000px;
-	/*height: 50px;*/
-	margin-left: auto;
-	margin-right: auto;
-	/*border: 0.1px solid red;*/
-}
-.result-tags > * {
-	/*border: 0.1px solid red;*/
-	display: inline;
-	/*height: 50px;*/
-	float: left;
-	padding: 17.5px;
 
+.result-wrapper {
 }
-.result-tags a {
-	font-size: 15px;
-}
-
 .result-body {
-	width: 100%;
-
-	padding: 20px;
-	height: 700px;
-	/*border: 0.1px solid red;*/
-	/*background-image: url('../images/bodybackground2.jpg');*/
-	/*background-repeat: no-repeat;
-	background-size:cover;
-	background-position: top;*/
-	background-color: black;
 }
 .result-body > * {
 	float: left;
 	padding: 10px;
-	width: 200px;
-	height: 200px;
+	width: 240px;
+	height: 240px;
 }
-.result-body .tracks-result * {
-	width: 190px;
-
+.detail-result {
+	position: fixed;
+	width: 900px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100vh;
+	background-color: yellow;
+	border: 0.1px solid red;
 
 }
-/*.result-body .tracks-result .display-text1 {
-	position: absolute;
-	margin-top: 20px;
-
-}*/
