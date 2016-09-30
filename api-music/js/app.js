@@ -53,7 +53,7 @@ var getMM = function(name,artist){
 	// console.log(name + ' by ' + artist);
 	$.ajax({
 
-			url: "http://api.musixmatch.com/ws/1.1/matcher.lyrics.get",
+			url: "https://api.musixmatch.com/ws/1.1/matcher.lyrics.get",
 			//jsonp: false,
 			dataType: "jsonp",
 			jsonp: 'callback',
