@@ -284,20 +284,18 @@ nav .logo-small:hover, nav .search-general:hover {
 	/*border: 1px solid red;*/
 	background-color: white;
 	position: absolute;
+	text-align: left;
+	padding:2%;
 	top: 30%;
 	left: 0;
 	width: 100%;
 	height: 70%;
-	text-align: center;
 	overflow: auto;
 }
 .extend-result > * {
 	width:100%;
 }
-.tk-details {
-	text-align: left;
-	padding:2%;
-}
+
 .tk-details .display-text1 >p {
 	margin-bottom: 5px;
 }

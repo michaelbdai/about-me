@@ -8,6 +8,9 @@ var resetGlobalVar = function(){
 	artistArrST = [];
 	searchCount = 0;
 	return;
+};
+var resetDetailResult = function(){
+	$('.generated-detail-result').html('')
 }
 //This function search on spotify.com ofr artist, album
 var displayTracks = function(tracksInfo){
@@ -129,21 +132,17 @@ var getBT = function(name,artist){
 	$.getJSON(urlBandsintown1,
 		function(result){
 			console.log('search bandsintown1')
-			console.log(result);
 			if(result.length === 0){
 				console.log('no result from bandsintown1');
-				return
-			};
-		})
-	var urlBandsintown2 = 'http://api.bandsintown.com/artists/'+ artist +'/events/search?format=json&app_id=spotifisearch&api_version=2.0&location=use_geoip&radius=150&callback=?'
-	$.getJSON(urlBandsintown2,
-		function(result){
-			console.log('search bandsintown2')
-			console.log(result);
-			if(result.length === 0){
-				console.log('no result from bandsintown2');
 				return;
-			};
+			}
+			var showLocation = result[0].formatted_location;
+			var showTime = result[0].formatted_datetime;
+			var ticketStatus = result[0].ticket_status;
+			var whereAndWhenStr = 'Show in ' + showLocation + ' on ' + showTime;
+			var ticketStatusStr = 'Avalability: ' + ticketStatus;
+			console.log(whereAndWhenStr);
+			console.log(ticketStatusStr);
 		})
 	return;
 }
@@ -186,9 +185,6 @@ var searchTracks = function(settings){
 		console.log(searchCount);
 	})
 }
-
-
-
 $(document).ready( function() {
 	event.preventDefault();
 		// $('.result').show();
@@ -246,13 +242,6 @@ $(document).ready( function() {
 		$('.top-layer').show();
 	});
 });
-
-
-
-
-
-
-
 
 // takes error string and turns it into displayable DOM element
 var showError = function(error){

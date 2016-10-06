@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Spotifisearch</title>
 	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<!-- Font Awesome Icon  -->
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/main.css">
 	<!-- the logo picture does not show!! -->
@@ -16,7 +18,7 @@
 	<nav class="nav-wrapper">
 		<div class="nav-inner">
 			<div class="logo-small result">
-				<a>Spotifisearch</a> <!-- logo-small ****************************-->
+				<a>Spotifisearch</a> <!-- logo-small ********************************-->
 			</div>
 			<div class="main-nav "><!-- main-nav***************************** -->
 				<form class="search-general result">
@@ -51,20 +53,23 @@
 			<div class="result-wrapper"> <!-- result-wrapper**************** -->
 				<div class="result-body"></div>
 				<div class="detail-result">
-					<div class="spotify-wrapper"></div>
+					<div class="spotify-wrapper generated-detail-result"></div>
 					<div class="extend-wrapper">
 						<div class="mm-wrapper">
 							<a class='icon'><img src = 'images/credit3.PNG' alt='mm' /></a>
 							<p class='songAndSingerNames hidden'></p>
+							<div class="generated-detail-result"></div>
 						</div>
 						<div class="tk-wrapper">
 							<a class='icon'><img src = 'images/credit2.PNG' alt='tk' /></a>
 							<p class='songAndSingerNames hidden'></p>
+							<div class="generated-detail-result"></div>
 						</div>
 
 						<div class="bt-wrapper">
 							<a class='icon'><img src = 'images/credit4.PNG' alt='bt' /></a>
 							<p class='songAndSingerNames hidden'></p>
+							<div class="generated-detail-result"></div>
 						</div>
 
 					</div>
@@ -97,9 +102,13 @@
 			<p class='display-text1'></p>
 		</div>
 		<div class="bit-details extend-result">
-			<p class='display-text1'></p>
+			<ul class="listings"></ul>
 		</div>
-
+		<li class="listing">
+			<span class="fa fa-ticket ticketIcon"></span>
+			<span class="when-where"></span>
+			<span class="avalability"></span>
+		</li>
 		<div class="explanation">
 			<h1>Explore Free Music</h1>
 			<p>This app let you explore music from free streaming website.</p>
