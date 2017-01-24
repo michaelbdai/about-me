@@ -1,0 +1,34 @@
+.display-box{
+  height: 500px;
+  width: 800px;
+  font-size: 0;
+}
+.innerA{
+  height: 200px;
+  width: 50%;
+  border: 1px black solid;
+  display: inline-block;
+  font-size: 0;
+}
+.innerB{
+  height: 300px;
+  width: 33.33%;
+  border: 1px black solid;
+  display: inline-block;
+  font-size: 0;
+}
+.inner-green{
+  background-color: green;
+}
+.inner-blue{
+  background-color: blue;
+}
+.inner-grey{
+  background-color: grey;
+}
+.inner-black{
+  background-color: black;
+}
+.inner-yellow{
+  background-color: yellow;
+}

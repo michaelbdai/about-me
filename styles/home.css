@@ -1,0 +1,75 @@
+
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0; /* Tricky: override browser default */
+  padding: 80px;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: grey;
+  border: 1px solid black;
+}
+.navLeft, .navRight {
+  font-size: 20px;
+  display: inline-block;
+}
+.navLeft {
+  float: left;
+  margin-left: 20px;
+}
+.navRight {
+  float: right;
+  margin-right: 20px;
+}
+header a {
+  text-decoration: none;
+}
+header a:link {
+  color: black;
+}
+header a:visited {
+  color: black;
+}
+header a:hover {
+  color: blue;
+}
+main {
+  width: 100%;
+  padding: 20px;
+}
+.listings {
+  padding: 0;
+}
+
+.listing {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.listing-date ,
+.listing-location {
+  color: grey;
+}
+
+.listing-title {
+  font-weight: bold;
+  font-size: 17px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.starIcon {
+  color: grey;
+  padding-right: 8px;
+}
+.starIcon:hover {
+  color: yellow;
+}

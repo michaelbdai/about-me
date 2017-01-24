@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Creg's-list</title>
+  <!-- Font Awesome Icon  -->
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <!-- Discription  -->
+  <meta charset="utf-8" name="description" content="Bing Dai Unit 1 Lesson 5 CSS challenge">
+  <!-- fonts  -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <!-- reset -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css">
+  <!-- styles -->
+  <link rel="stylesheet" type="text/css" href="styles/cregs-list.css">
+</head>
+<body>
+
+  <header>
+    <div class="navLeft">Greg's List</div>
+    <div class="navRight"><a href="index.html">Post</a></div>
+    <div class="navRight"><a href="index.html">Account</a></div>
+  </header>
+  <main>
+    <div>
+      <form class='demo-form' action="/some-server-endpoint" method='post'>
+            <h1>But how do you really feel?</h1>
+
+          <fieldset name="contact-info">
+            <h3>Contact info</h3>
+            <label for="first-name">First name</label>
+              <input placeholder='Dweezel' type="text" name='first-name' id='first-name' />
+
+            <label for="last-name">Last name</label>
+            <input type="text" name='last-name' id='last-name' placeholder='Zappa' />
+
+            <label for="email">Email</label>
+            <input type="email" name='email' id='email' />
+
+            <label for="phone" required>Phone #</label>
+            <input type='tel' pattern='[0-9/-]*' name='phone' id='phone' placeholder="888-888-8888" title="A typical phone number" required/>
+          </fieldset>
+          <section>
+            <label class="question" for="feelings">How do you feel about it?</label>
+            <select name="feelings" id='feelings' required>
+              <option value="0">Great </option>
+              <option value="1" selected>Pretty great</option>
+              <option value="2">Definitely great</option>
+            </select>
+
+              <p class="question">How do you really feel, though?</p>
+              <input type="radio" name="feelings-2" id="ans-great-1" value="0" checked><label for="ans-great-1">Great</label>
+              <input type="radio" name="feelings-2" id="ans-great-2" value="1"><label for="ans-great-2">Seriously great</label>
+              <input type="radio" name="feelings-2" id="ans-great-3" value="2"><label for="ans-great-3">Not that not great.</label>
+          </section>
+
+          <button type='submit'>Submit</button>
+          <button type='reset'>Reset</button>
+        </form>
+    </div>
+
+
+
+
+  </main>
+</body>
+</html>

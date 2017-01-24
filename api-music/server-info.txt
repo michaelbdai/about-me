@@ -1,0 +1,46 @@
+body {
+    color: #444;
+    font: normal 100% helvetica, arial, sans-serif;
+    line-height: 100%;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+https://developer.spotify.com/web-api/
+Client ID
+d1053b0861b94905b077f3e7788f3792
+Client Secret
+0c397a21ae2c43d5ade1834f70b62467
+d1053b0861b94905b077f3e7788f3792:0c397a21ae2c43d5ade1834f70b62467
+
+https://www.mixcloud.com/developers/
+radio only, no artist list
+
+http://www.last.fm/api
+API key fef0b86938ba46622da6648608782692
+Shared secret	3a8c31f2994b5d6008cd046f3f8a54c9
+Registered to	michaelbdai
+http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=cher&api_key=YOUR_API_KEY&format=json
+
+https://developers.soundcloud.com/docs/api/reference
+<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/34019569&amp;color=0066cc"></iframe>
+
+no search function
+
+
+http://www.programmableweb.com/api/8tracks
+
+
+taste kid
+240254-BingDai-6SQWHIFJ
+
+https://developer.musixmatch.com/documentation/api-methods
+key 33620d00ea8d8795ff4e49f0b4549d03
+to find lyrics
+
+vevo embed
+https://iframely.com/embed/http%3A%2F%2Fwww.vevo.com%2Fwatch%2F2pac%2FDear-Mama%2FUSUV70500943
+
+youtube
+<iframe class="tk-Tear-video" src="https://www.youtube-nocookie.com/embed/XmSdTa9kaiQ" frameborder="0" allowfullscreen=""></iframe>
+from vevo. restricted from playback on certain sites

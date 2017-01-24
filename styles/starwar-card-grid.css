@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+main {
+  padding: 0px;
+  margin: 100px 0 0 0;
+  width: 100%;
+  padding: 40px;
+}
+
+nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  margin: 0px;
+  padding: 10px 40px;
+  background-image: url("../images/space.png");
+  background-color: black;
+  background-repeat: no-repeat;
+  color: white;
+}
+nav h1 {
+  font-size: 25px;
+  letter-spacing: 2px;
+  margin-bottom: 0px;
+}
+nav p {
+  font-size: 12px;
+  margin-top: 10px;
+  text-align: left;
+}
+.box {
+  text-align: center;
+  padding: 0px;
+  border: 1px solid grey;
+}
+main h2 {
+  display: block;
+  height: 20px;
+  text-align: left;
+  margin-left: 20px;
+}
+main p{
+  font-size: 12px;
+  margin-top: 0px;
+  margin-left: 20px;
+  text-align: left;
+}
+main .square-image{
+  width: 100%;
+}
+.row {
+  max-width: 1000px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+/* Clearfix */
+.row::before,
+.row::after {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-4 {
+  float: left;
+  padding: 1.04166666%;
+}
+
+/* Mobile defaults */
+.col-4 {
+  width: 100%;
+}
+
+
+/* Non-mobile, grid */
+@media only screen and (min-width: 640px) {
+  .col-4 {
+    width: 33%;
+  }
+
+}
