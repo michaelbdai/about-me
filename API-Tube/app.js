@@ -30,7 +30,7 @@ $(function(){
 function getRequest1(searchTerm){
   var params = {
     part: 'snippet',
-    key: 'AIzaSyDwXJ0nozl17ONdaoby2TqVHaTHXa8FCQ0',
+    key: '',
     q: searchTerm
   };
   var idUrl;
