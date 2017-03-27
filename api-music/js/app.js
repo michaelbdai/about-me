@@ -63,7 +63,7 @@ var getMM = function(name,artist){
 			data: {
 							q_track: name,
 							q_artist: artist,
-							apikey: '33620d00ea8d8795ff4e49f0b4549d03',
+							apikey: '',
 							format: 'jsonp',
 			}
 	}).done(function(result){
@@ -97,7 +97,7 @@ var getTK = function(keyword1,keyword2){
 			jsonp: 'callback',
 
 	    data: {
-							k: '240254-BingDai-6SQWHIFJ',
+							k: '',
 							q: keyword1,
 							info: 1,
 							type: 'music',
